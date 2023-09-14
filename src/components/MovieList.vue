@@ -1,13 +1,7 @@
 <script setup>
-import { ref } from "vue";
-
-defineProps({
-  msg: String,
-});
-
-const count = ref(0);
+import axios from "axios";
 </script>
 
-<template>test</template>
+<template>movie</template>
 
 <style scoped></style>

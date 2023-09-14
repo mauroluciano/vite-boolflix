@@ -1,9 +1,13 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
+import AppHeader from "./components/AppHeader.vue";
+import MovieList from "./components/MovieList.vue";
+import AppMain from "./components/AppMain.vue";
 </script>
 
 <template>
-  <HelloWorld />
+  <AppHeader />
+  <MovieList />
+  <AppMain />
 </template>
 
 <style lang="scss">
