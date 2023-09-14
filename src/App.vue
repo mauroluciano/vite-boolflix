@@ -6,6 +6,6 @@ import HelloWorld from "./components/HelloWorld.vue";
   <HelloWorld />
 </template>
 
-<style scoped>
+<style lang="scss">
 @use "./assets/styles/general.scss";
 </style>
