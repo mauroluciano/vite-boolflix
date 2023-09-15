@@ -8,6 +8,7 @@ import axios from "axios";
 export default {
   data() {
     return {
+      title: "Lista dei film",
       store,
     };
   },
@@ -21,7 +22,7 @@ export default {
           "https://api.themoviedb.org/3/search/movie?query=batman&api_key=6de6c3fec90304b52c1b139cc3f8055e"
         )
         .then((response) => {
-          store.movies = response.data.results;
+          this.store.movies = response.data.results;
           console.log(response.data.results);
         });
     },
@@ -34,9 +35,11 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
-  <MovieList />
-  <AppMain />
+  <div class="container">
+    <AppHeader />
+    <MovieList />
+    <AppMain />
+  </div>
 </template>
 
 <style lang="scss">
