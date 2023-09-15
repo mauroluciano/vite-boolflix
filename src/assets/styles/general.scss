@@ -1,5 +1,16 @@
 // VARIABLES
-@use "./partials/variables";
+@use "./partials/variables" as *;
 
 // MIXINS
-@use "./partials/mixins";
+@use "./partials/mixins" as *;
+
+// BOOTSTRAP
+@use "bootstrap/dist/css/bootstrap.min.css";
+
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+body {
+  background-color: #525659;
+  font-family: "Roboto", sans-serif;
+}

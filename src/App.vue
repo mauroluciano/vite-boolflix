@@ -35,13 +35,13 @@ export default {
 </script>
 
 <template>
+  <AppHeader />
   <div class="container">
-    <AppHeader />
     <MovieList />
     <AppMain />
   </div>
 </template>
 
 <style lang="scss">
-@use "./assets/styles/general.scss";
+@use "./assets/styles/general.scss" as *;
 </style>
