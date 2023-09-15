@@ -2,14 +2,13 @@
 import AppHeader from "./components/AppHeader.vue";
 import MovieList from "./components/MovieList.vue";
 import AppMain from "./components/AppMain.vue";
-
+import { store } from "./data/store.js";
 import axios from "axios";
 
 export default {
   data() {
     return {
-      title: "Lista dei film",
-      movies: [],
+      store,
     };
   },
 
@@ -22,7 +21,7 @@ export default {
           "https://api.themoviedb.org/3/search/movie?query=batman&api_key=6de6c3fec90304b52c1b139cc3f8055e"
         )
         .then((response) => {
-          this.movies = response.data.results;
+          store.movies = response.data.results;
           console.log(response.data.results);
         });
     },
