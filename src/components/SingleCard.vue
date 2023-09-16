@@ -10,7 +10,7 @@ export default {
 
 <template>
   <div class="card" style="width: 18rem">
-    <img src="#" class="card-img-top" alt="..." />
+    <img :src="movie.poster_path" class="card-img-top" alt="..." />
     <div class="card-body">
       <h5 class="card-title">{{ movie.title }}</h5>
       <h1>{{ movie.original_title }}</h1>
