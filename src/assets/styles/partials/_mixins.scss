@@ -8,6 +8,8 @@
   flex-direction: column;
 }
 
-header {
+nav {
+  @include flex();
   background-color: black;
+  height: 60px;
 }

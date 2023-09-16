@@ -16,11 +16,14 @@ export default {
   components: { AppHeader, MovieList, AppMain },
 
   methods: {
-    fetchMovies() {
+    fetchMovies(term) {
       axios
-        .get(
-          "https://api.themoviedb.org/3/search/movie?query=batman&api_key=6de6c3fec90304b52c1b139cc3f8055e"
-        )
+        .get("https://api.themoviedb.org/3/search/movie", {
+          params: {
+            query: term,
+            api_key: "6de6c3fec90304b52c1b139cc3f8055e",
+          },
+        })
         .then((response) => {
           this.store.movies = response.data.results;
           console.log(response.data.results);
@@ -35,7 +38,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
+  <AppHeader @start-search="fetchMovies" />
   <div class="container">
     <MovieList />
     <AppMain />

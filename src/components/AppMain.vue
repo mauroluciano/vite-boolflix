@@ -1,5 +1,17 @@
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      title: "Libreria film",
+    };
+  },
+};
+</script>
 
-<template></template>
+<template>
+  <div class="container mt-4">
+    <h1>{{ title }}</h1>
+  </div>
+</template>
 
-<style scoped></style>
+<style lang="scss" scoped></style>

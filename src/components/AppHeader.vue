@@ -1,17 +1,31 @@
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      term: "",
+    };
+  },
+};
+</script>
 
 <template>
-  <header>
-    <div class="row">
-      <div class="col">BoolFlix</div>
-      <div class="col">
-        <input type="text" class="form-control" id="" />
-        <button type="submit" class="btn btn-primary">Search</button>
-      </div>
+  <nav class="navbar bg-black">
+    <div class="container-fluid">
+      <a class="navbar-brand">BoolFlix </a>
+      <form
+        class="d-flex"
+        role="search"
+        @submit.prevent="$emit('start-search', term)">
+        <input
+          class="form-control me-2"
+          type="search"
+          v-model="term"
+          placeholder="Search"
+          aria-label="Search" />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
-  </header>
+  </nav>
 </template>
 
-<style lang="scss">
-@use "../assets/styles/general.scss" as *;
-</style>
+<style lang="scss"></style>
