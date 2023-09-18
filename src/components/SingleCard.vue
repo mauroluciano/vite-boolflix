@@ -30,7 +30,7 @@ export default {
 
       <div class="card-body">
         <h5 class="card-title">{{ movie.title }}</h5>
-        <h1>{{ movie.original_title }}</h1>
+        <h3>{{ movie.original_title }}</h3>
         <p class="card-text">{{ movie.overview }}</p>
         <p>Release date: {{ movie.release_date }}</p>
         <p>Rate: {{ movie.vote_average }}</p>
