@@ -8,11 +8,6 @@ export default {
     showDiv() {
       this.select = true;
       console.log(this.select);
-      //const poster = document.querySelector(`[key=${this.key}]`);
-      //const details = document.querySelector(".card-body");
-      //const posterImg = poster.querySelector(".card-img-top");
-      //posterImg.classList.toggle("d-none");
-      //details.classList.toggle("d-none");
     },
 
     noShowDiv() {
