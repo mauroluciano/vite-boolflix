@@ -33,10 +33,11 @@ export default {
         <h3>{{ movie.original_title }}</h3>
         <p class="card-text">{{ movie.overview }}</p>
         <p>Release date: {{ movie.release_date }}</p>
-        <p>Rate: {{ movie.vote_average }}</p>
-        <p><font-awesome-icon icon="fa-solid fa-star" v-for="n in 5" /></p>
-
-        <!--<p>Original language: {{ movie.original_language }}</p>-->
+        <p>
+          Rate: <font-awesome-icon icon="fa-solid fa-star" v-for="n in 5" />
+          {{ movie.vote_average }}
+        </p>
+        <p>Original language: {{ movie.original_language }}</p>
       </div>
     </div>
   </div>
