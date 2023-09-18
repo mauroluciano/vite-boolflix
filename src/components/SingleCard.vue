@@ -1,7 +1,24 @@
 <script>
 export default {
   data() {
-    return {};
+    select: false;
+  },
+
+  methods: {
+    showDiv() {
+      this.select = true;
+      console.log(this.select);
+      //const poster = document.querySelector(`[key=${this.key}]`);
+      //const details = document.querySelector(".card-body");
+      //const posterImg = poster.querySelector(".card-img-top");
+      //posterImg.classList.toggle("d-none");
+      //details.classList.toggle("d-none");
+    },
+
+    noShowDiv() {
+      this.select = false;
+      console.log(this.select);
+    },
   },
 
   props: { movie: Object },
@@ -15,6 +32,7 @@ export default {
         :src="'https://image.tmdb.org/t/p/original' + movie.poster_path"
         class="card-img-top"
         alt="..." />
+
       <div class="card-body">
         <h5 class="card-title">{{ movie.title }}</h5>
         <h1>{{ movie.original_title }}</h1>
@@ -27,4 +45,17 @@ export default {
   </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.card-body {
+  display: none;
+  max-height: 430px;
+  overflow-y: scroll;
+}
+.card:hover img {
+  display: none;
+}
+
+.card:hover .card-body {
+  display: initial !important;
+}
+</style>

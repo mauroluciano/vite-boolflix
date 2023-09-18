@@ -26,7 +26,6 @@ export default {
         })
         .then((response) => {
           this.store.movies = response.data.results;
-          console.log(response.data.results);
         });
     },
   },
@@ -40,8 +39,8 @@ export default {
 <template>
   <AppHeader @start-search="fetchMovies" />
   <div class="container">
-    <MovieList />
     <AppMain />
+    <MovieList />
   </div>
 </template>
 
